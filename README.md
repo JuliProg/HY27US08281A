@@ -1,10 +1,10 @@
-![Create new chip](https://github.com/JuliProg/K9F1G08U0D/workflows/Create%20new%20chip/badge.svg?event=repository_dispatch)
-![ChipUpdate](https://github.com/JuliProg/K9F1G08U0D/workflows/ChipUpdate/badge.svg)
+![Create new chip](https://github.com/JuliProg/HY27US08281A/workflows/Create%20new%20chip/badge.svg?event=repository_dispatch)
+![ChipUpdate](https://github.com/JuliProg/HY27US08281A/workflows/ChipUpdate/badge.svg)
 # Join the development of the project ([list of tasks](https://github.com/users/JuliProg/projects/1))
 
 
-# K9F1G08U0D
-Implementation of the K9F1G08U0D chip for the JuliProg programmer
+# HY27US08281A
+Implementation of the HY27US08281A chip for the JuliProg programmer
 
 Dependency injection, DI based on MEF framework is used to connect the chip to the programmer.
 
@@ -25,7 +25,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         ChipAssembly()
         {
             myChip.devManuf = "SAMSUNG";
-            myChip.name = "K9F1G08U0D";
+            myChip.name = "HY27US08281A";
             myChip.chipID = "ECF1001540";      // device ID - ECh F1h 00h 15h 40h (k9f1g08u0d_00.pdf page 36)
 
             myChip.width = Organization.x8;    // chip width - 8 bit
@@ -81,6 +81,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         
 ```
 </section>
+
 
 
 
