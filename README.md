@@ -61,7 +61,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
                 "Status Register").
                 Size(1).
                 Operations("ReadStatus_70h").
-                Interpretation("SR_Interpreted").   //From ChipPart\SR_Interpreted.dll
+                Interpretation("SR_Interpreted").   //From https://github.com/JuliProg/Wiki/wiki/Status-Register-Interpretation
                 UseAsStatusRegister();
 
 
@@ -70,17 +70,11 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
                 "Id Register").
                 Size(2).
                 Operations("ReadId_90h");               
-                //Interpretation(ID_interpreting);          // From here
+                
 
-```
-# Interpretation of ID-register values ​​(optional)
-```c#
-
-
-        public string ID_interpreting(Register register)   
-        
 ```
 </section>
+
 
 
 
