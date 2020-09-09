@@ -26,17 +26,17 @@ namespace HY27US08281A
 
         ChipAssembly()
         {
-            myChip.devManuf = "SAMSUNG";
+            myChip.devManuf = "Hynix";
             myChip.name = "HY27US08281A";
-            myChip.chipID = "ECF1001540";      // device ID - ECh F1h 00h 15h 40h (k9f1g08u0d_00.pdf page 36)
+            myChip.chipID = "AD73";            // device ID - ADh 73h (HY27US08281A.pdf page 30)
 
             myChip.width = Organization.x8;    // chip width - 8 bit
-            myChip.bytesPP = 2048;             // page size - 2048 byte (2Kb)
-            myChip.spareBytesPP = 64;          // size Spare Area - 64 byte
-            myChip.pagesPB = 64;               // the number of pages per block - 64 
+            myChip.bytesPP = 512;             // page size - 512 byte
+            myChip.spareBytesPP = 16;          // size Spare Area - 16 byte
+            myChip.pagesPB = 32;               // the number of pages per block - 32 
             myChip.bloksPLUN = 1024;           // number of blocks in CE - 1024
             myChip.LUNs = 1;                   // the amount of CE in the chip
-            myChip.colAdrCycles = 2;           // cycles for column addressing
+            myChip.colAdrCycles = 1;           // cycles for column addressing
             myChip.rowAdrCycles = 2;           // cycles for row addressing 
             myChip.vcc = Vcc.v3_3;             // supply voltage
 
@@ -49,7 +49,7 @@ namespace HY27US08281A
 
             myChip.Operations("Reset_FFh").
                    Operations("Erase_60h_D0h").
-                   Operations("Read_00h_30h").
+                   Operations("Read_00h").
                    Operations("PageProgram_80h_10h");
 
             #endregion
@@ -71,9 +71,9 @@ namespace HY27US08281A
 
             myChip.registers.Add(
                 "Id Register").
-                Size(5).
-                Operations("ReadId_90h").               
-                Interpretation(ID_interpreting);          // From here
+                Size(2).
+                Operations("ReadId_90h");               
+                //Interpretation(ID_interpreting);          // From here
 
             #endregion
 
