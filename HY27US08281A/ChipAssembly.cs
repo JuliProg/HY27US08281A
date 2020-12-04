@@ -14,8 +14,7 @@ namespace HY27US08281A
     for automatically include <some code> in the READMY.md file in the repository
     */
 
-    #region
-    
+    #region 
     public class ChipAssembly
     {
         [Export("Chip")]
