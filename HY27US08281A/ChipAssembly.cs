@@ -15,6 +15,7 @@ namespace HY27US08281A
     */
 
     #region
+    
     public class ChipAssembly
     {
         [Export("Chip")]
