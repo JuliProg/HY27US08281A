@@ -10,20 +10,18 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 
 <section class = "listing">
 
-# 
-```c#
-
-    public class ChipAssembly
-    {
-        [Export("Chip")]
-        ChipPrototype myChip = new ChipPrototype();
-```
 # Chip parameters
 ```c#
 
 
         ChipAssembly()
         {
+            //--------------------Vendor Specific Pin configuration---------------------------
+
+            //  VSP1(38pin) - GND    
+            //  VSP2(35pin) - NC
+            //  VSP3(20pin) - NC
+
             myChip.devManuf = "Hynix";
             myChip.name = "HY27US08281A";
             myChip.chipID = "AD73";            // device ID - ADh 73h (HY27US08281A.pdf page 30)
@@ -74,6 +72,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 
 ```
 </section>
+
 
 
 
