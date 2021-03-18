@@ -14,18 +14,24 @@ namespace HY27US08281A
     for automatically include <some code> in the READMY.md file in the repository
     */
 
-    #region 
+     
     public class ChipAssembly
     {
         [Export("Chip")]
         ChipPrototype myChip = new ChipPrototype();
-        #endregion
+        
 
 
         #region Chip parameters
 
         ChipAssembly()
         {
+            //--------------------Vendor Specific Pin configuration---------------------------
+
+            //  VSP1(38pin) - GND    
+            //  VSP2(35pin) - NC
+            //  VSP3(20pin) - NC
+
             myChip.devManuf = "Hynix";
             myChip.name = "HY27US08281A";
             myChip.chipID = "AD73";            // device ID - ADh 73h (HY27US08281A.pdf page 30)
